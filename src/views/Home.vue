@@ -6,23 +6,19 @@
       </div>
       <div class="col-md-10 page-content border-left">
         <dashboard v-if="activePage === 'dashboard'" />
-        <brochure v-else-if="activePage === 'brochures'" />
         <cards v-else-if="activePage === 'cards'" />
-        <users v-else-if="activePage === 'users'" />
-        <categories v-else-if="activePage === 'categories'" />
         <profile v-else-if="activePage == 'profile'"/>
-        <settings v-else-if="activePage == 'settings'"/>
+        <settings v-else-if="activePage == 'settings'" />
+        <history v-else-if="activePage == 'history'"/>
       </div>
     </div>
     <div class="row" v-else>
       <div class="col-md-12 page-content border-left">
         <dashboard v-if="activePage === 'dashboard'" />
-        <brochure v-else-if="activePage === 'brochures'" />
         <cards v-else-if="activePage === 'cards'" />
-        <users v-else-if="activePage === 'users'" />
-        <categories v-else-if="activePage === 'categories'" />
         <profile v-else-if="activePage == 'profile'"/>
-        <settings v-else-if="activePage == 'settings'"/>
+        <settings v-else-if="activePage == 'settings'" />
+        <history v-else-if="activePage == 'history'"/>
       </div>
     </div>
     <div class="row">
@@ -34,12 +30,10 @@
 <script>
 import Sidebar from "./shared/Sidebar.vue";
 import Dashboard from "./pages/Dashboard.vue";
-import Brochure from "./pages/Brochures.vue";
 import Cards from "./pages/Cards.vue";
-import Users from "./pages/Users.vue";
-import Categories from "./pages/Categories.vue";
 import Profile from './pages/Profile.vue';
 import Settings from './pages/Settings.vue';
+import History from './pages/History.vue';
 
 import AllModals from "./shared/AllModals.vue";
 import store from "../store/index.js";
@@ -49,13 +43,11 @@ export default {
   components: {
     Sidebar,
     Dashboard,
-    Brochure,
     AllModals,
     Cards,
-    Users,
-    Categories,
     Profile,
-    Settings
+    Settings,
+    History
   },
   computed: {
     showSidebar() {

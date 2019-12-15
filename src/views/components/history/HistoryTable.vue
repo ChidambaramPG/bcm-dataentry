@@ -1,10 +1,10 @@
 <template>
-  <div class="card-box">
+  <div class="">
     <div class="table-responsive">
       <div class="row table-row">
         <div class="col-md-12">
-          <h5 class="table-title">Unprocessed Cards</h5>
-          <!-- <table class="table table-hover">
+          <h5 class="table-title">Your works</h5>
+          <table class="table table-hover">
             <thead class="table-head">
               <tr>
                 <th>Card</th>
@@ -121,90 +121,7 @@
              
               
             </tbody>
-          </table> -->
-
-          <div class="row">
-            <div class="col-md-4">
-              <a href="" @click.prevent="showEditCard">
-                <img
-                  class="card-img img-responsive"
-                  src="../../../assets/img/card.jpg"
-                />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="" @click.prevent="showEditCard">
-                <img
-                  class="card-img img-responsive"
-                  src="../../../assets/img/card.jpg"
-                />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="" @click.prevent="showEditCard">
-                <img
-                  class="card-img img-responsive"
-                  src="../../../assets/img/card.jpg"
-                />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="" @click.prevent="showEditCard">
-                <img
-                  class="card-img img-responsive"
-                  src="../../../assets/img/card.jpg"
-                />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="" @click.prevent="showEditCard">
-                <img
-                  class="card-img img-responsive"
-                  src="../../../assets/img/card.jpg"
-                />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="" @click.prevent="showEditCard">
-                <img
-                  class="card-img img-responsive"
-                  src="../../../assets/img/card.jpg"
-                />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="" @click.prevent="showEditCard">
-                <img
-                  class="card-img img-responsive"
-                  src="../../../assets/img/card.jpg"
-                />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="" @click.prevent="showEditCard">
-                <img
-                  class="card-img img-responsive"
-                  src="../../../assets/img/card.jpg"
-                />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="" @click.prevent="showEditCard">
-                <img
-                  class="card-img img-responsive"
-                  src="../../../assets/img/card.jpg"
-                />
-              </a>
-            </div>
-            <div class="col-md-4">
-              <a href="" @click.prevent="showEditCard">
-                <img
-                  class="card-img img-responsive"
-                  src="../../../assets/img/card.jpg"
-                />
-              </a>
-            </div>
-          </div>
+          </table>
         </div>
       </div>
     </div>
@@ -232,19 +149,20 @@
   </div>
 </template>
 <script>
-import store from "../../../store/index.js";
+import store from '../../../store/index.js';
 export default {
-  name: "BusinessCards",
-  methods: {
-    showEditCardsModal() {
-      store.commit("toggleEditCardModal");
+  name: "HistoryTable",
+  methods:{
+    showEditCardsModal(){
+      store.commit('toggleEditCardModal')
     },
-    showDeleteCardsModal() {
-      store.commit("toggleDeleteCardModal");
+    showDeleteCardsModal(){
+      store.commit('toggleDeleteCardModal')
     },
-    showEditCard() {
-      store.commit("setCardsSection", "edit");
+    showEditCard(){
+      store.commit('setCardsSection','edit');
     }
+
   }
 };
 </script>
@@ -275,24 +193,24 @@ th {
   background-color: #f95473;
   color: white;
 }
-.pagination-row {
-  padding-top: 10px;
+.pagination-row{
+  padding-top:10px;
+  
 }
-nav {
-  width: 100%;
+nav{
+  width:100%;
 }
 
-li.page-item > a {
-  color: #f95473;
-  background-color: white;
+li.page-item>a{
+  color:#f95473;
+  background-color:white;
 }
-li.page-item.active > a {
-  color: #f95473;
+li.page-item.active>a{
+  color:#f95473;
   background-color: #212b5e;
   border-color: transparent;
 }
-.card-img {
-  width: 80%;
-  margin: 20px;
+.card-img{
+  width:200px;
 }
 </style>

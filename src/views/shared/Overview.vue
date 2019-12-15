@@ -3,32 +3,10 @@
         <div class="col-lg-4 col-md-6 overview-card">
             <div class="card">
                 <div class="card-header">
-                    Business Cards
+                    Total Cards Added
                 </div>
                 <div class="card-body">                    
-                    {{brochureCount}} <i class="fas fa-arrow-up fa-xs"></i>
-                </div>
-            </div>  
-        </div>
-
-        <!-- <div class="col-lg-3 col-md-6 overview-card">
-            <div class="card">
-                <div class="card-header">
-                    Brochures
-                </div>
-                <div class="card-body">
-                    {{businessCardCount}} <i class="fas fa-arrow-up fa-xs"></i>
-                </div>
-            </div>  
-        </div> -->
-
-        <div class="col-lg-4 col-md-6 overview-card">
-            <div class="card">
-                <div class="card-header">
-                    Categories
-                </div>
-                <div class="card-body">
-                    {{categoriesCount}} <i class="fas fa-arrow-up fa-xs"></i>                    
+                    1200 <i class="fas fa-arrow-up fa-xs"></i>
                 </div>
             </div>  
         </div>
@@ -36,10 +14,21 @@
         <div class="col-lg-4 col-md-6 overview-card">
             <div class="card">
                 <div class="card-header">
-                    Users
+                    Available Cards
                 </div>
                 <div class="card-body">
-                    {{usersCount}} <i class="fas fa-arrow-down fa-xs"></i>
+                    5500 <i class="fas fa-arrow-up fa-xs"></i>                    
+                </div>
+            </div>  
+        </div>
+
+        <div class="col-lg-4 col-md-6 overview-card">
+            <div class="card">
+                <div class="card-header">
+                    Monthly Quota
+                </div>
+                <div class="card-body">
+                    3000 <i class="fas fa-arrow-down fa-xs"></i>
                     
                 </div>
             </div>  

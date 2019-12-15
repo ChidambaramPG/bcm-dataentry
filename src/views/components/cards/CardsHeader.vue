@@ -1,12 +1,12 @@
 <template>
     <div class="row header-row">
         
-        <div class="col-md-2">
+        <!-- <div class="col-md-2" v-if="getCardsSection == 'table'">
             <button class="btn btn-block rounded btn-new" @click="showAddNewCardSection">
                 <i class="fas fa-plus-circle"></i><span> Add New</span>
             </button>
             
-        </div>
+        </div> -->
         <!-- <div class="col-md-2">
             <button class="btn btn-block rounded btn-new" @click="showAddNewCardModal">
                 <i class="fas fa-camera"></i><span> Open Camera</span>
@@ -27,6 +27,11 @@ export default {
         },
         showAddNewCardSection(){
             store.commit('setCardsSection','add');
+        }
+    },
+    computed:{
+        getCardsSection(){
+            return store.state.cardsSecton;
         }
     }
 }

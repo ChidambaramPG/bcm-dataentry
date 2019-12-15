@@ -5,10 +5,8 @@
     </a>
     <ul class="list-group list-group-flush sidebar-list">
       <sidebar-menu-item name="dashboard"/>
-      <!-- <sidebar-menu-item name="brochures"/> -->
       <sidebar-menu-item name="cards"/>
-      <sidebar-menu-item name="users"/>
-      <sidebar-menu-item name="categories"/>
+      <sidebar-menu-item name="history"/>
     </ul>
   </div>
 </template>
@@ -34,8 +32,8 @@ export default {
   },
   methods: {
     setContentLayout: page => {
-      // console.log("setting page", page);
       store.commit("setActivePage", page);
+      
     }
   },
   components:{
@@ -59,5 +57,12 @@ a.sidebar-heading {
   min-height: calc(100vh - 50px);
   font-size: 14px;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1)
+}
+
+
+@media (max-width:320px)  {
+  .sidebar-content{
+    height:262px;
+  }
 }
 </style>

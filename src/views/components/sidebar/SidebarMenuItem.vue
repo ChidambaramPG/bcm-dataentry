@@ -20,8 +20,23 @@ export default {
   name: "SidebarMenuItem",
   methods: {
     setContentLayout: page => {
-      // console.log("setting page", page);
       store.commit("setActivePage", page);
+
+      switch(page){
+        case 'dashboard':{
+          store.commit('setDashboardSection','table')
+          break
+        }
+        case 'card':{
+          store.commit('setCardsSection','table')
+          break
+        }
+        default:{
+          store.commit('setCardsSection','table')
+          break
+        }
+      }
+
     },
     convertName(name){
       return name.charAt(0).toUpperCase()+name.slice(1)
